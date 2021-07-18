@@ -2,7 +2,7 @@
 import Icon from '@mdi/react';
 import { mdiChevronDown, mdiFileFind } from '@mdi/js';
 
-function ShopFilter() {
+const ShopFilter = () => {
     return (
         <div class="shop-filters">
             <div id="accordion">
