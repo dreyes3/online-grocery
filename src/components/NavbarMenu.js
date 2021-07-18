@@ -1,9 +1,14 @@
-
+import "../css/osahan.css";
+import "../css/common.css";
+import "select2/dist/css/select2.min.css";
+import "owl-carousel/owl-carousel/owl.carousel.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "datatables/media/css/jquery.dataTables.min.css";
 
 function NavbarMenu() {
     return (
         <nav class="navbar navbar-expand-lg navbar-light osahan-menu-2 pad-none-mobile">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 margin-auto">
                         <li class="nav-item">

@@ -1,10 +1,16 @@
+import logo from '../img/logo.png';
+import Icon from '@mdi/react';
+import { mdiAccount, mdiCart } from '@mdi/js';
 
 function NavbarSearch() {
    return (
+
+
       <nav class="navbar navbar-light navbar-expand-lg bg-light bg-faded osahan-menu">
+
          <div class="container">
             <a class="navbar-brand" href="index.html">
-               <img src="./img/login.jpg" alt="logo" />
+               <img src={logo} alt="logo" />
             </a>
 
             <button class="navbar-toggler navbar-toggler-white" type="button" data-toggle="collapse"
@@ -29,14 +35,22 @@ function NavbarSearch() {
                <div class="my-2 my-lg-0">
                   <ul class="list-inline main-nav-right">
                      <li class="list-inline-item cart-btn">
-                        <a href="#" data-toggle="offcanvas" class="btn btn-link border-none"><i class="mdi mdi-cart"></i>
-                           My Cart <small class="cart-value">5</small></a>
+                        <a href="#" data-toggle="offcanvas" class="btn btn-link border-none">
+                           <i class="mdi mdi-cart">
+                              <Icon path={mdiCart} size={.8} color="black" />
+                           </i>
+                           <small class="cart-value">5</small>
+                        </a>
                      </li>
                   </ul>
+
                </div>
+
+
             </div>
          </div>
-      </nav>
+      </nav >
+
    );
 }
 

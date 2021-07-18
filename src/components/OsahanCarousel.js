@@ -1,5 +1,3 @@
-
-
 function OsahanCarousel() {
     return (
         <section class="osahan-carousel-two border-top py-4">

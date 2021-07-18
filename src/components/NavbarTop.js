@@ -1,3 +1,10 @@
+import "../css/osahan.css";
+import "../css/common.css";
+import "select2/dist/css/select2.min.css";
+import "owl-carousel/owl-carousel/owl.carousel.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "datatables/media/css/jquery.dataTables.min.css";
+
 function NavbarTop() {
     return (
         <div class="navbar-top pt-2 pb-2">

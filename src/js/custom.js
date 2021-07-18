@@ -4,7 +4,8 @@ Author: Askbootstrap
 Author URI: https://themeforest.net/user/askbootstrap
 Version: 1.1
 */
-$(document).ready(function() {
+
+$(document).ready(function () {
     "use strict";
 
     // ===========Featured Owl Carousel============
@@ -29,7 +30,7 @@ $(document).ready(function() {
             lazyLoad: true,
             pagination: false,
             loop: true,
-			dots: false,
+            dots: false,
             autoPlay: false,
             navigation: true,
             stopOnHover: true,
@@ -61,7 +62,7 @@ $(document).ready(function() {
             lazyLoad: true,
             pagination: false,
             loop: true,
-			dots: false,
+            dots: false,
             autoPlay: 2000,
             navigation: true,
             stopOnHover: true,
@@ -71,7 +72,7 @@ $(document).ready(function() {
     }
 
     // ===========Right Sidebar============
-    $('[data-toggle="offcanvas"]').on('click', function() {
+    $('[data-toggle="offcanvas"]').on('click', function () {
         $('body').toggleClass('toggled');
     });
 
@@ -109,7 +110,7 @@ $(document).ready(function() {
         pagination: false,
         navigation: true,
         autoPlay: 2500,
-		dots: false,
+        dots: false,
         nav: true,
         navigationText: ["<i class='mdi mdi-chevron-left'></i>", "<i class='mdi mdi-chevron-right'></i>"],
         afterAction: syncPosition,
@@ -123,7 +124,7 @@ $(document).ready(function() {
         nav: true,
         navigationText: ["<i class='mdi mdi-chevron-left'></i>", "<i class='mdi mdi-chevron-right'></i>"],
         responsiveRefreshRate: 100,
-        afterInit: function(el) {
+        afterInit: function (el) {
             el.find(".owl-item").eq(0).addClass("synced");
         }
     });
@@ -139,7 +140,7 @@ $(document).ready(function() {
             center(current)
         }
     }
-    $("#sync2").on("click", ".owl-item", function(e) {
+    $("#sync2").on("click", ".owl-item", function (e) {
         e.preventDefault();
         var number = $(this).data("owlItem");
         sync1.trigger("owl.goTo", number);

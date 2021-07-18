@@ -1,5 +1,3 @@
-import "jquery/dist/jquery.min.js";
-
 $(function () {
 
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
