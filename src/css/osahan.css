@@ -296,7 +296,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff934b', end
     /* IE6-9 fallback on horizontal gradient */
 }
 .osahan-menu {
-    padding: 0px;
+    padding: 0px !important;
     background: #fff !important;
 }
 .osahan-menu .navbar-brand {
