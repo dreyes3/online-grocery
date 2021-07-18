@@ -1,12 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./css/osahan.css";
-import "./css/owl.carousel.css";
-import "./css/owl.theme.css";
-import "./css/select2-bootstrap.css";
-import "./css/select2.min.css";
+import "./css/common.css";
+import "select2/dist/css/select2.min.css";
+import "owl-carousel/owl-carousel/owl.carousel.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "datatables/media/css/jquery.dataTables.min.css";
+
+// import "./js/contact_me.js";
+// import "./js/custom.js";
+// import "./js/jqBootstrapValidation.js";
+import "jquery/dist/jquery.min.js";
 
 ReactDOM.render(
     <React.StrictMode>

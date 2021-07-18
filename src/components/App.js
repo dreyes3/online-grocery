@@ -1,12 +1,18 @@
 
+import LoginModalMain from "./LoginModalMain";
 import NavbarTop from "./NavbarTop";
-import NavbarLight from "./NavbarLight";
+import NavbarSearch from "./NavbarSearch";
+import NavbarExpand from "./NavbarExpand";
+import OsahanCarousel from "./OsahanCarousel";
+import NavbarMenu from "./NavbarMenu";
 
 function App() {
   return (
     <>
+      <LoginModalMain />
       <NavbarTop />
-      <NavbarLight />
+      <NavbarSearch />
+      <NavbarMenu />
     </>
   );
 }
