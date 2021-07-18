@@ -1,6 +1,5 @@
 import shopImage from '../img/shop.jpg';
 import ShopFilter from '../components/ShopFilter';
-import ShopFilter2 from '../components/ShopFilter2';
 
 function ShopList() {
     return (
