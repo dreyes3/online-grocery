@@ -30,8 +30,7 @@ function NavbarTop() {
                     </div>
                 </div>
             </div>
-            <SignUp
-                show={showSignUp}
+            <SignUp show={showSignUp}
                 onHide={() => setShowSignUp(false)}
             />
 
