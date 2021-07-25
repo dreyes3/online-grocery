@@ -1,8 +1,61 @@
 import shopImage from '../img/shop.jpg';
 import ShopFilter from './ShopFilters/ShopFilter';
 import Products from './Product/Products';
+import firebase from 'firebase';
+import { collection, query, where } from "firebase/firestore";
+
+
+
 
 const ShopList = () => {
+
+    var firebaseConfig = {
+        apiKey: "AIzaSyDOJtQFBB10L8pP5RyTuRSGL5dVaFiRSxs",
+        authDomain: "online-grocer-f7915.firebaseapp.com",
+        projectId: "online-grocer-f7915",
+        storageBucket: "online-grocer-f7915.appspot.com",
+        messagingSenderId: "14599917625",
+        appId: "1:14599917625:web:7f3b3ebd4b215d6cb93de8",
+        measurementId: "G-JWCTGNC62Q"
+    };
+
+    // if (!firebase.apps.length) {
+    //     firebase.initializeApp(firebaseConfig);
+    // } else {
+    //     firebase.app();
+    // }
+
+
+
+    // const db = firebase.firestore();
+
+    //     db.collection('User').onSnapshot((snapshot) => {
+    //         console.log('snapshot');
+    //         console.log(snapshot.forEach({
+    //             x => console.log(x.FirstName)
+    //         }));
+    // console.log(snapshot.data);
+    //     });
+
+
+    // db.collection("User").add({
+    //     FirstName: "david",
+    //     LastName: "reyes"
+    // });
+
+    // const prod = db.collection("Product")
+    //     .get()
+    //     .then((snapshot) => {
+    //         if (snapshot.exists) {
+    //             console.log('Snaphost data....');
+    //             console.log(snapshot.data);
+    //         }
+    //     });
+
+
+    // console.log('firebase....');
+    // console.log(prod);
+
 
     return (
         <section class="shop-list section-padding">

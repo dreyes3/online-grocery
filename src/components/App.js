@@ -1,5 +1,4 @@
 
-import LoginModalMain from "./LoginModalMain";
 import NavbarTop from "./NavbarTop";
 import NavbarSearch from "./NavbarSearch";
 import NavbarMenu from "./NavbarMenu";
@@ -14,13 +13,11 @@ import "select2/dist/css/select2.min.css";
 import "owl-carousel/owl-carousel/owl.carousel.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "datatables/media/css/jquery.dataTables.min.css";
-import $ from 'jquery';
 
 
 function App() {
   return (
     <>
-      <LoginModalMain />
       <NavbarTop />
       <NavbarSearch />
       <NavbarMenu />
