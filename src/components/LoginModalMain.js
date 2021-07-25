@@ -1,5 +1,9 @@
-function LoginModalMain() {
+
+
+function LoginModalMain(props) {
     return (
+
+
         <div class="modal fade login-modal-main" id="bd-example-modal">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -94,7 +98,6 @@ function LoginModalMain() {
                 </div>
             </div>
         </div>
-
     );
 }
 
