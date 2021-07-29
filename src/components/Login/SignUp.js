@@ -7,8 +7,10 @@ export default function SignUp(props) {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const createAccount = useAuth()
+    const { signup } = useAuth()
     const [error, setError] = useState("")
+    const [infoMessage, setInfoMessage] = useState("")
+    const [infoMessageVariant, setInfoMessageVariant] = useState("")
     const [loading, setLoading] = useState(false)
     const history = useHistory()
 
@@ -16,19 +18,23 @@ export default function SignUp(props) {
         e.preventDefault()
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError("Password do not match")
+            return setInfoMessage("Password do not match")
         }
 
         try {
-            setError("")
+            setInfoMessage("")
             setLoading(true)
-            console.log('await')
 
-            await createAccount(emailRef.current.value, passwordRef.current.value)
+            await signup(emailRef.current.value, passwordRef.current.value)
+
+            setInfoMessage("Sign up successful!")
+            setInfoMessageVariant("success")
+
             history.push("/")
         } catch (e) {
             if (e.code !== undefined) {
-                setError(`Code: ${e.code} | Message: ${e.message}`)
+                setInfoMessage(`Code: ${e.code} | Message: ${e.message}`)
+                setInfoMessageVariant("danger")
             }
         }
         setLoading(false)
@@ -49,7 +55,7 @@ export default function SignUp(props) {
                                 <div class="tab-pane active" id="register" role="tabpanel">
 
                                     <h5 class="heading-design-h5">Register Now!</h5>
-                                    {error && <Alert variant="danger">{error}</Alert>}
+                                    {infoMessage && <Alert variant={infoMessageVariant}>{infoMessage}</Alert>}
                                     <fieldset class="form-group">
                                         <label>Enter Email</label>
                                         <input type="text" class="form-control" placeholder="email@domain.com" ref={emailRef} />
