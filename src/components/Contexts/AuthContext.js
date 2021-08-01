@@ -10,9 +10,9 @@ export function useAuth() {
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
+    const [fullName, setFullName] = useState('')
 
     function signup(email, password) {
-        console.log(`email pass: ${email} : ${password}`)
         return auth.createUserWithEmailAndPassword(email, password)
     }
 
@@ -36,9 +36,25 @@ export function AuthProvider({ children }) {
         return currentUser.updatePassword(password)
     }
 
+    function updateProfile(displayName) {
+        console.log(`updateProfile: ${displayName}`)
+        return currentUser.updateProfile({
+            displayName: displayName
+        })
+    }
+
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
-            setCurrentUser(user)
+
+            // console.log(`fullName: ${fullName}`)
+
+            // if (user) {
+            //     user.updateProfile({
+            //         displayName: fullName
+            //     })
+            //     setCurrentUser(user)
+            //     console.log(JSON.stringify(user))
+            // }
             setLoading(false)
         })
 
@@ -52,7 +68,8 @@ export function AuthProvider({ children }) {
         logout,
         resetPassword,
         updateEmail,
-        updatePassword
+        updatePassword,
+        updateProfile
     }
 
     return (

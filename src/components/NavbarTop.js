@@ -1,15 +1,15 @@
-
-import { useState } from 'react';
 import SignUp from '../components/Login/SignUp';
 import Login from '../components/Login/Login';
+
+import React, { useRef, useState } from "react"
+import { Modal, Alert, Form } from 'react-bootstrap'
+import { Link, useHistory } from "react-router-dom"
+import { useAuth } from '../components/Contexts/AuthContext'
+
 
 function NavbarTop() {
     const [showSignUp, setShowSignUp] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
-
-
-    const loginOnClick = () => setShowLogin(true);
-
 
     return (
         <>
@@ -30,16 +30,18 @@ function NavbarTop() {
                     </div>
                 </div>
             </div>
-            <SignUp show={showSignUp}
+
+            <SignUp
+                show={showSignUp}
                 onHide={() => setShowSignUp(false)}
             />
+
 
             <Login
                 show={showLogin}
                 onHide={() => setShowLogin(false)}
             />
 
-            {/* {showLogin ? <Login /> : null} */}
         </>
 
     );
