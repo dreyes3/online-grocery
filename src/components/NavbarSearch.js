@@ -2,10 +2,10 @@ import logo from '../img/logo.png';
 import Icon from '@mdi/react';
 import { mdiAccount, mdiCart } from '@mdi/js';
 
-function NavbarSearch() {
+function NavbarSearch(props) {
+   const searchText = props.searchText
+
    return (
-
-
       <nav class="navbar navbar-light navbar-expand-lg bg-light bg-faded osahan-menu">
 
          <div class="container">
@@ -22,8 +22,13 @@ function NavbarSearch() {
                <div class="navbar-nav mr-auto mt-5 mt-lg-2 margin-auto top-categories-search-main">
                   <div class="top-categories-search">
                      <div class="input-group">
-                        <input class="form-control" placeholder="Search products in Your City"
-                           aria-label="Search products in Your City" type="text" />
+
+                        <input class="form-control"
+                           placeholder="Search products in Your City"
+                           aria-label="Search products in Your City" type="text"
+                           value={searchText}
+                           onChange={e => props.onSearchTextChange(e.target.value)}
+                        />
                         <span class="input-group-btn">
                            <button class="btn btn-secondary" type="button"><i class="mdi mdi-file-find"></i>
                               Search</button>

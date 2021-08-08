@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import { Modal, Alert, Form } from 'react-bootstrap'
 import { Link, useHistory } from "react-router-dom"
 import { useAuth } from '../Contexts/AuthContext'
@@ -16,6 +16,15 @@ export default function SignUp(props) {
     const [infoMessageVariant, setInfoMessageVariant] = useState("")
     const [loading, setLoading] = useState(false)
     const [showLogin, setShowLogin] = useState(false);
+
+
+    useEffect(() => {
+        console.log(
+            "This only happens ONCE.  But it happens AFTER the initial render."
+        );
+
+        setInfoMessage("")
+    }, []);
 
 
     function showSignUpFields(show) {

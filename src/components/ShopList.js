@@ -7,7 +7,7 @@ import { collection, query, where } from "firebase/firestore";
 
 
 
-const ShopList = () => {
+const ShopList = (props) => {
 
     var firebaseConfig = {
         apiKey: "AIzaSyDOJtQFBB10L8pP5RyTuRSGL5dVaFiRSxs",
@@ -62,7 +62,9 @@ const ShopList = () => {
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
+
                         <ShopFilter />
+
                         <div class="left-ad mt-4">
                             <img class="img-fluid" src="http://via.placeholder.com/254x557" alt="" />
                         </div>
@@ -85,7 +87,8 @@ const ShopList = () => {
                             </div>
                             <h5 class="mb-3">Fruits</h5>
                         </div>
-                        <Products />
+
+                        <Products searchText={props.searchText} />
 
                         <nav>
                             <ul class="pagination justify-content-center">

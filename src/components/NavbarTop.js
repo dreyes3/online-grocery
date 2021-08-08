@@ -11,6 +11,7 @@ function NavbarTop() {
     const [showSignUp, setShowSignUp] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
 
+
     return (
         <>
             <div class="navbar-top pt-2 pb-2">
